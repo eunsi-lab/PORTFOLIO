@@ -107,9 +107,66 @@ function App() {
             </section>
 
             {/* Footer */}
-            <footer style={{ padding: '5rem 0', borderTop: '1px solid #222', textAlign: 'center', color: '#444' }}>
-                <p>© 2025 Eunsi Lab. Built with React & AI.</p>
-            </footer>
+            {/* About Section */}
+            <section id="about" style={{ padding: '8rem 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', lineHeight: 1.2 }}>
+                        MORE THAN <br /> JUST PIXELS.
+                    </h2>
+                    <div style={{ width: '50px', height: '4px', background: '#646cff', marginBottom: '2rem' }}></div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    style={{ fontSize: '1.1rem', color: '#aaa', lineHeight: 1.6 }}
+                >
+                    <p style={{ marginBottom: '1.5rem' }}>
+                        I am a creative technologist bridging the gap between human intuition and artificial intelligence. My work explores how generative algorithms can amplify design intent, creating interfaces that feel alive.
+                    </p>
+                    <p>
+                        With a background in traditional UI/UX and a passion for neural networks, I build digital experiences that are not just functional, but adaptive and surprising.
+                    </p>
+
+                    <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+                        {['Generative AI', 'UI/UX Strategy', 'React/Three.js', 'Prototyping'].map(skill => (
+                            <span key={skill} style={{ border: '1px solid #333', padding: '0.5rem 1rem', borderRadius: '50px', fontSize: '0.9rem', color: '#fff' }}>
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* Contact Section */}
+            <section id="contact" style={{ padding: '8rem 0 4rem 0', textAlign: 'center' }}>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>READY TO COLLABORATE?</h2>
+                    <p style={{ fontSize: '1.2rem', color: '#888', marginBottom: '3rem' }}>
+                        Let's build the future of interaction together.
+                    </p>
+
+                    <a href="mailto:qazplm5996@gmail.com" style={{ textDecoration: 'none' }}>
+                        <button style={{ fontSize: '1.2rem', padding: '1rem 3rem', borderRadius: '50px', background: '#fff', color: '#000', fontWeight: 'bold' }}>
+                            qazplm5996@gmail.com
+                        </button>
+                    </a>
+                </motion.div>
+
+                {/* Footer Content moved inside Contact */}
+                <div style={{ marginTop: '5rem', borderTop: '1px solid #222', paddingTop: '2rem', color: '#444' }}>
+                    <p>© 2025 Eunsi Lab. Built with React & AI.</p>
+                </div>
+            </section>
 
         </div>
     )
